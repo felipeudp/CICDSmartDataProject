@@ -9,16 +9,17 @@ from pyspark.sql.types import *
 # COMMAND ----------
 
 dbutils.widgets.text("container", "raw")
-dbutils.widgets.text("catalogo", "catalog_smartdata")
+dbutils.widgets.text("catalogo", "catalog_sd")
 dbutils.widgets.text("esquema", "bronze")
+dbutils.widgets.text("datalake", "adlssmartdatafcr")
 
 # COMMAND ----------
 
 container = dbutils.widgets.get("container")
 catalogo = dbutils.widgets.get("catalogo")
 esquema = dbutils.widgets.get("esquema")
-
-ruta = f"/Volumes/{catalogo}/{container}/datasets/circuits.csv"
+datalake = dbutils.widgets.get("datalake")
+ruta = f"abfss://{container}@{datalake}.dfs.core.windows.net/circuits.csv"
 
 # COMMAND ----------
 
