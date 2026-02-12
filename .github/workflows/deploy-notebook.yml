@@ -149,7 +149,8 @@ jobs:
                 "base_parameters": {
                   "container": "raw",
                   "catalogo": "catalog_sd",
-                  "esquema": "bronze"
+                  "esquema": "bronze",
+                  "datalake": "adlssmartdatafcr",
                 }
               },
               "existing_cluster_id": "$CLUSTER_ID",
@@ -170,7 +171,8 @@ jobs:
                 "base_parameters": {
                   "container": "raw",
                   "catalogo": "catalog_sd",
-                  "esquema": "bronze"
+                  "esquema": "bronze",
+                  "datalake": "adlssmartdatafcr",
                 }
               },
               "existing_cluster_id": "$CLUSTER_ID",
