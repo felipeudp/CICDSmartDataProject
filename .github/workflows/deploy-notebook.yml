@@ -208,7 +208,7 @@ jobs:
                 }
               ]
             },
-                        {
+            {
               "task_key": "Load",
               "description": "Ejecuta notebook Load",
               "notebook_task": {
